@@ -1,0 +1,20 @@
+{
+    "name": "Python 3.11 + Poetry Codespace",
+    "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye", // 1. Imagen base optimizada de Python 3.11
+    // 2. Feature para instalar Poetry
+    "features": {
+        "ghcr.io/devcontainers-extra/features/poetry:2": {
+            "version": "1.8.5"
+        }
+    },
+    // 3. Configurar extensiones recomendadas de VS Code
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python" // Extensión oficial de Python
+            ]
+        }
+    },
+    // 4. Comandos post creación: instalar dependencias del proyecto
+    "postCreateCommand": "poetry install"
+}
