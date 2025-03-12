@@ -132,3 +132,12 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# VS Code settings
+.vscode/
+# Local history for all files
+.localhistory/
+# VS Code workspace settings
+.vscode/
+# Local history for all files
+.localhistory/

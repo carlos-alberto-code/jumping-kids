@@ -16,5 +16,5 @@
         }
     },
     // 4. Comandos post creación: instalar dependencias del proyecto
-    "postCreateCommand": "poetry install"
+    "postCreateCommand": "poetry shell && poetry install"
 }

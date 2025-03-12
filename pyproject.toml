@@ -5,11 +5,14 @@ description = "Aplicación de ejercicios para niños"
 authors = ["Carlos Alberto Baltazar Hinojosa <97766052+carlos-alberto-code@users.noreply.github.com>"]
 readme = "README.md"
 
+package-mode = false
+
 [tool.poetry.dependencies]
 python = "^3.11"
 flet = "^0.27.6"
 sqlalchemy = "^2.0.39"
 mysql-connector-python = "^9.2.0"
+alembic = "^1.15.1"
 
 
 [build-system]
