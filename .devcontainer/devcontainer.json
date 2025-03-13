@@ -1,21 +1,31 @@
 {
-    "name": "Python 3.11 + Poetry Codespace",
-    "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye", // 1. Imagen base optimizada de Python 3.11
-    // 2. Feature para instalar Poetry
-    "features": {
-        "ghcr.io/devcontainers-extra/features/poetry:2": {
-            "version": "1.8.5"
-        }
+  "name": "Python 3.11 Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
     },
-    // 3. Configurar extensiones recomendadas de VS Code
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-python.python",
-                "cweijan.vscode-database-client2"
-            ]
-        }
-    },
-    // 4. Comandos post creación: instalar dependencias del proyecto
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y mysql-server"
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-contrib/features/poetry:2": {
+      "version": "1.8.0"
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && sudo apt-get update && sudo apt-get install -y sqlite3 libsqlite3-dev",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "python.poetryPath": "poetry"
+      }
+    }
+  }
 }
