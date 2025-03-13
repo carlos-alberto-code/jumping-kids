@@ -141,3 +141,9 @@ cython_debug/
 .vscode/
 # Local history for all files
 .localhistory/
+
+# Los archivos de SQLite
+*.sqlite
+*.sql
+*.sqlite3
+*.db
