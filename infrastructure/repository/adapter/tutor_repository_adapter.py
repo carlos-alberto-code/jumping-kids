@@ -1,6 +1,6 @@
-from infrastructure.model.models import Tutor
+from infrastructure.model.models import TutorEntity
 from infrastructure.repository.repository import Repository
 
 
-class TutorRepositoryAdapter(Repository[Tutor]):
+class TutorRepositoryAdapter(Repository[TutorEntity]):
     pass
