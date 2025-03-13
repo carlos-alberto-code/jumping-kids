@@ -1,15 +1,19 @@
+import os
+from dotenv import load_dotenv
+
 from typing import Generator
 from contextlib import contextmanager
 
-
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
+
 from infrastructure.database.models import Base
 
-DATABASE_URL = "sqlite:///jumping_kids_pre.db"
 
-engine = create_engine(DATABASE_URL, echo=True)
+load_dotenv() # Cargar variables de entorno desde el archivo .env
+JUMPING_KIDS_PRE = os.getenv("JUMPING_KIDS_PRE", "sqlite:///:memory:") # Asigna una base de datos en memoria si no se encuentra la variable de entorno
+
+engine = create_engine(JUMPING_KIDS_PRE, echo=True)
 
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 
