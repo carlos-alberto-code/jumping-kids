@@ -11,9 +11,9 @@ from infrastructure.database.models import Base
 
 
 load_dotenv() # Cargar variables de entorno desde el archivo .env
-JUMPING_KIDS_PRE = os.getenv("JUMPING_KIDS_PRE", "sqlite:///:memory:") # Asigna una base de datos en memoria si no se encuentra la variable de entorno
+DATABASE_URL_PRE = os.getenv("DATABASE_URL_PRE", "sqlite:///:memory:") # Asigna una base de datos en memoria si no se encuentra la variable de entorno
 
-engine = create_engine(JUMPING_KIDS_PRE, echo=True)
+engine = create_engine(DATABASE_URL_PRE, echo=True)
 
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 
