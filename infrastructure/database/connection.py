@@ -7,7 +7,7 @@ from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 
-from infrastructure.database.models import Base
+from infrastructure.model.models import Base
 
 
 load_dotenv() # Cargar variables de entorno desde el archivo .env

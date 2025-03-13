@@ -2,7 +2,8 @@ from typing import Type, TypeVar, Generic
 
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from infrastructure.database.models import Base
+
+from infrastructure.model.models import Base
 
 
 T = TypeVar("T", bound=Base)

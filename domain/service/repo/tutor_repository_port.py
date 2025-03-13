@@ -1,0 +1,2 @@
+class TutorRepositoryPort:
+    pass
