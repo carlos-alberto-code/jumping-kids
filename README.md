@@ -5,7 +5,6 @@
 Para comenzar con el proyecto, asegúrate de tener instalado Visual Studio Code (VSCode) y las siguientes extensiones, ya que estamos utilizando GitHub Codespaces:
 
 - [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 ## Configuración del Entorno
 
