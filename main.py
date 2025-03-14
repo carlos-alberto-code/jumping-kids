@@ -9,7 +9,6 @@ with get_session() as session:
     repo.delete(CategoriaEntity(id=1, nombre="Categoria 1"))
     repo.update(CategoriaEntity(id=1, nombre="Categoria 2"))
     repo.get_by_id(id=1)
-    repo.get_by_name("")
 
 
 CategoriaEntity.id
